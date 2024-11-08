@@ -43,6 +43,7 @@ public class ventanaArbolExpresionController {
     @FXML
     void limpiarCanvas(ActionEvent event) {
         canvas.getGraphicsContext2D().clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
+        txtExpresion.setText("");
     }
 
     @FXML
