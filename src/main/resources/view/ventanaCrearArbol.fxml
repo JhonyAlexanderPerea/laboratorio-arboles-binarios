@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" styleClass="Fondo-Ventana" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ventanaCrearArbolController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <BorderPane prefHeight="636.0" prefWidth="800.0" stylesheets="@../styles.css">
+            <top>
+                <Label fx:id="txtTitulo" text="DIBUJO DE ARBOL BINARIO" textFill="WHITE" BorderPane.alignment="CENTER">
+                    <font>
+                        <Font name="Proza Libre Bold" size="55.0" />
+                    </font>
+                </Label>
+            </top>
+
+            <center>
+                <!-- Se añade el Canvas para dibujar el árbol -->
+                <GridPane alignment="CENTER" prefHeight="400.0" style="-fx-border-color: #ccc; -fx-background-color: #f4f4f4;" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                        <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints />
+                    </rowConstraints>
+                    <children>
+                        <!-- Aquí agregamos el Canvas con un tamaño de 400x400 (puedes ajustarlo según necesites) -->
+                        <Canvas fx:id="canvas" height="400.0" width="400.0" GridPane.rowIndex="0" />
+                    </children>
+                </GridPane>
+            </center>
+
+            <bottom>
+                <GridPane BorderPane.alignment="CENTER_RIGHT">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="54.0" minHeight="10.0" prefHeight="53.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="27.0" minHeight="6.0" prefHeight="27.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="24.0" minHeight="10.0" prefHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Button fx:id="btnAgregarNodo" mnemonicParsing="false" onAction="#agregarNodo" prefHeight="26.0" prefWidth="180.0" styleClass="button-sobrio" stylesheets="@../styles.css" text="Agregar Nodo" GridPane.valignment="CENTER" />
+                        <Button fx:id="btnEliminarNodo" mnemonicParsing="false" onAction="#eliminarNodo" prefHeight="26.0" prefWidth="180.0" styleClass="button-sobrio" stylesheets="@../styles.css" text="Eliminar Nodo" GridPane.columnIndex="1" />
+                        <Button fx:id="limpiarArbol" mnemonicParsing="false" onAction="#limpiarArbol" prefHeight="26.0" prefWidth="180.0" styleClass="button-sobrio" stylesheets="@../styles.css" text="Limpiar Árbol" GridPane.columnIndex="2" />
+                        <Button fx:id="btnSalir" mnemonicParsing="false" onAction="#salir" styleClass="button-salida" stylesheets="@../styles.css" text="SALIR" GridPane.halignment="LEFT" GridPane.rowIndex="2" />
+                    </children>
+                </GridPane>
+            </bottom>
+
+        </BorderPane>
+    </children>
+</VBox>

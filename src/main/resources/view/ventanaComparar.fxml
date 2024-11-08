@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" spacing="20.0" styleClass="Fondo-Ventana" stylesheets="@../styles.css" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ventanaCompararController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <!-- Título de la ventana -->
+        <Label fx:id="txtTitulo" text="COMPARAR ARBOLES BINARIOS" textFill="WHITE">
+            <font>
+                <Font name="Proza Libre Bold" size="40.0" />
+            </font>
+        </Label>
+
+        <!-- Ingreso de los valores del primer árbol -->
+        <Label text="Introduce los números del primer árbol (separados por comas):" textFill="WHITE" />
+        <TextField fx:id="txtArbol1" prefWidth="400.0" promptText="Ej: 5,3,7,2,4,6,8" />
+
+        <!-- Ingreso de los valores del segundo árbol -->
+        <Label text="Introduce los números del segundo árbol (separados por comas):" textFill="WHITE" />
+        <TextField fx:id="txtArbol2" prefWidth="400.0" promptText="Ej: 5,3,7,2,4,6,8" />
+
+        <!-- Botón para comparar los árboles -->
+        <Button fx:id="btnComparar" onAction="#compararArboles" prefHeight="40.0" prefWidth="200.0" styleClass="button-sobrio" stylesheets="@../styles.css" text="Comparar Árboles" />
+
+        <!-- Mensaje de resultado -->
+        <Label fx:id="lblResultado" text="" textFill="WHITE" />
+
+        <!-- Botón para salir -->
+        <Button fx:id="btnSalir" onAction="#salir" prefHeight="40.0" prefWidth="100.0" styleClass="button-salida" stylesheets="@../styles.css" text="SALIR" />
+    </children>
+</VBox>

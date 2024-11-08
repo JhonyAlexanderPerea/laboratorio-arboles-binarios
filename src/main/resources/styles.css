@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre:wght@400;600&display=swap');
+
+.button-sobrio {
+    -fx-background-color: #2C3E50; /* Fondo gris oscuro */
+    -fx-text-fill: #ECF0F1; /* Texto en blanco */
+    -fx-font-size: 14px;
+    -fx-font-family: 'Proza Libre', sans-serif; /* Fuente Proza Libre */
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 90px;
+    -fx-border-color: #34495E;
+    -fx-border-width: 1px;
+    -fx-border-radius: 90px;
+}
+
+.button-sobrio:hover {
+    -fx-background-color: #34495E; /* Fondo más claro al pasar el cursor */
+    -fx-cursor: hand;
+}
+
+.button-sobrio:pressed {
+    -fx-background-color: #1F2A36; /* Fondo más oscuro al presionar */
+}
+
+.button-salida {
+    -fx-background-color: #8B0000; /* Fondo rojo oscuro */
+    -fx-text-fill: #FFFFFF; /* Texto en blanco */
+    -fx-font-size: 14px;
+    -fx-font-family: 'Proza Libre', sans-serif; /* Fuente Proza Libre */
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 90px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 90px;
+}
+
+/* Efecto al pasar el cursor */
+.button-salida:hover {
+    -fx-background-color: #B22222; /* Rojo un poco más claro */
+    -fx-cursor: hand;
+}
+
+/* Efecto al presionar el botón */
+.button-salida:pressed {
+    -fx-background-color: #660000; /* Rojo más oscuro */
+}
+
+.Fondo-Ventana {
+    -fx-background-color: #3C3F41;
+}
